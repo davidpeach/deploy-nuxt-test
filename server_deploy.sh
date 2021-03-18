@@ -14,8 +14,8 @@ git checkout -B deploy
 git fetch origin deploy
 git reset --hard origin/deploy
 
-npm install --only=production
-npm run build
+/home/david/.nvm/versions/node/v14.16.0/bin/npm install --only=production
+/home/david/.nvm/versions/node/v14.16.0/bin/npm run build
 
 # Replace current version with the new one
 
@@ -26,7 +26,7 @@ mv deploy-nuxt-test-new deploy-nuxt-test
 # Restart server
 
 cd deploy-nuxt-test
-pm2 kill
-pm2 start "npm run start" --name App
+/home/david/.nvm/versions/node/v14.16.0/bin/pm2 kill
+/home/david/.nvm/versions/node/v14.16.0/bin/pm2 start "npm run start" --name App
 rm -rf ../deploy-nuxt-test-old
 echo "Deployment finished"
